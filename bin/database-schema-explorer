@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once(__DIR__ . '/../vendor/autoload.php');
+
+use Symfony\Component\Console\Application;
+
+
+$application = new Application('Database Schema Explorer', '0.0.1');
+$application->add(new \DSE\Command\DatabaseTestConnectionCommand());
+$application->add(new \DSE\Command\DatabaseListDatabasesCommand());
+$application->add(new \DSE\Command\DatabaseListTablesCommand());
+$application->add(new \DSE\Command\DatabaseDetailTableCommand());
+
+$application->run();

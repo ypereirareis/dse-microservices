@@ -1,0 +1,13 @@
+locale:
+  host: 'mysql'
+  database: 'mysql'
+  driver: 'pdo_mysql'
+  user: 'root'
+  password: 'trololo'
+
+akeneo:
+  host: '110.14.10.12'
+  database: 'mysql'
+  driver: 'pdo_mysql'
+  user: 'akeneo'
+  password: ''
