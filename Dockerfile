@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
 	php5-cli \
 	php5-common \
 	php5-curl \
-	php5-mysql
+	php5-mysql \
+	mysql-client-5.5
 
 CMD [ "php","-v" ]
