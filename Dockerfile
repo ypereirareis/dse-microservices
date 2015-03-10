@@ -12,4 +12,10 @@ RUN apt-get update && apt-get install -y \
 	php5-mysql \
 	mysql-client-5.5
 
-CMD [ "php","-v" ]
+RUN php -v
+
+VOLUME ["/app"]
+
+WORKDIR /app
+
+CMD ["-"]
