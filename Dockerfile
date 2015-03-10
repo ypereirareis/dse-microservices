@@ -19,3 +19,5 @@ VOLUME ["/app"]
 WORKDIR /app
 
 CMD ["-"]
+
+ENTRYPOINT ["bin/database-schema-explorer"]
