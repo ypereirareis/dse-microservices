@@ -23,11 +23,12 @@ RUN apt-get install -y nodejs
 RUN npm install -g bower
 RUN npm install -g gulp
 RUN npm install -g grunt
+RUN npm install express
 
 VOLUME ["/app"]
 
 WORKDIR /app
 
 EXPOSE 3000
-CMD []
+CMD [ "node","server.js" ]
 
