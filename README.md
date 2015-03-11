@@ -1,4 +1,4 @@
-# DSE - Microservices
+# Backend (Microservices) - Database Schema Explorer
 
 ## Docker image
 
