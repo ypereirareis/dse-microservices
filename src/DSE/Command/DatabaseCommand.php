@@ -169,10 +169,19 @@ abstract class DatabaseCommand extends Command
 
     /**
      * @param array $data
+     * @throws \Exception
      */
     protected function renderJson(array $data = array())
     {
-        echo json_encode($data);
+        $result = json_encode($data, 0, 99999);
+
+        if (null === $result) {
+            throw new \Exception(
+                sprintf('There is an error in your JSON data: %s-%s', json_last_error(), json_last_error_msg())
+            );
+        }
+
+        echo $result;
     }
 
     protected function renderText(array $data = array())
