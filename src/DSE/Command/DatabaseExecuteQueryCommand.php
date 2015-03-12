@@ -42,6 +42,9 @@ class DatabaseExecuteQueryCommand extends DatabaseCommand
                 if (empty($columns)) {
                     $columns = array_keys($row);
                 }
+                foreach ($row as $k => $r) {
+                    $row[$k] = utf8_encode($r);
+                }
                 $results[] = $row;
             }
 
